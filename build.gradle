@@ -25,7 +25,7 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
 	runtimeOnly 'com.h2database:h2'
-	compileOnly 'org.projectlombok:lombok:1.18.30' // Use the latest version
+	compileOnly 'org.projectlombok:lombok:1.18.42' // Use the latest version
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
 
