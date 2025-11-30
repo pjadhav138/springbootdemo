@@ -44,17 +44,17 @@ public class Democontroller {
 	public List<LoanAmountByMonthDTO> getTotalLoanAmountsByMonth() {
 		return loanRepository.findTotalLoanAmountsGroupedByMonth();
 	}
-	
-	 @GetMapping("/summary")
-	    public LoanSummaryDTO getLoanSummary() {
-	       BigDecimal totalPending = loanRepository.findTotalLoanAmountDisbursed(); 
-	        
-	        BigDecimal actualDisbursed = loanRepository.findActualDisbursedAmount();
-	        BigDecimal activeDisbursed = loanRepository.findActiveDisbursedAmount();
-	        LoanSummaryDTO summary = new LoanSummaryDTO();
-	        summary.setTotalDisbursedAmount(actualDisbursed);
-	        summary.setTotalPendingRepayment(totalPending);
-	        summary.setActiveDisbursedAmount(activeDisbursed);
-	        return summary;
-	    }
+
+	@GetMapping("/summary")
+	public LoanSummaryDTO getLoanSummary() {
+		BigDecimal totalPending = loanRepository.findTotalLoanAmountDisbursed();
+
+		BigDecimal actualDisbursed = loanRepository.findActualDisbursedAmount();
+		BigDecimal activeDisbursed = loanRepository.findActiveDisbursedAmount();
+		LoanSummaryDTO summary = new LoanSummaryDTO();
+		summary.setTotalDisbursedAmount(actualDisbursed);
+		summary.setTotalPendingRepayment(totalPending);
+		summary.setActiveDisbursedAmount(activeDisbursed);
+		return summary;
+	}
 }
